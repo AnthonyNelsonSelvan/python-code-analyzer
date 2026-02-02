@@ -1,0 +1,30 @@
+.window{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selection-btn{
+    padding: 7px 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: larger;
+    transition: 500ms;
+}
+
+.selection-btn:hover{
+    transform: scale(1.1);
+}
+
+.paste-btn{
+    padding: 7px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: larger;
+    transition: 500ms;
+}
+
+.paste-btn:hover{
+    transform: scale(1.1);
+}
