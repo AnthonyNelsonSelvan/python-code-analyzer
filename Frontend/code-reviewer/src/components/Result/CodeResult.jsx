@@ -5,6 +5,7 @@ const CodeResult = ({ initialCodeLines = [], initialIssues = [] }) => {
   const [lines, setLines] = useState(initialCodeLines);
   const [issues, setIssues] = useState(initialIssues);
   const [auditLog, setAuditLog] = useState([]);
+  const [humanDecision, setHumanDecision] = useState(null);
 
   useEffect(() => {
     setLines(initialCodeLines);
@@ -137,6 +138,43 @@ const CodeResult = ({ initialCodeLines = [], initialIssues = [] }) => {
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+        {issues.length === 0 && humanDecision === null && (
+          <div className="audit-report">
+            <h3>✅ No Issues Detected</h3>
+            <p>
+              Our system did not find any issues. Do you agree with this review?
+            </p>
+
+            <div className="tooltip-actions">
+              <button
+                className="btn-ack"
+                onClick={() => {
+                  setHumanDecision("agree");
+                  window.location.reload();
+                }}
+              >
+                Agree
+              </button>
+
+              <button
+                className="btn-reject"
+                onClick={() => setHumanDecision("disagree")}
+              >
+                Disagree
+              </button>
+            </div>
+          </div>
+        )}
+
+        {humanDecision === "disagree" && (
+          <div className="audit-report">
+            <h3>⚠️ Review Not Accepted</h3>
+            <p>
+              Sorry for the inconvenience. Please review the code manually or
+              try re-analyzing.
+            </p>
           </div>
         )}
       </div>
