@@ -1,37 +1,38 @@
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 48px;
-  z-index: 9999;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 48px;
+    z-index: 9999;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .head {
-  font-size: 20px;
-  font-weight: 700;
-  color: #1f2937;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
 }
 
 .link {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
 }
 
 .btn {
-  padding: 6px 14px;
-  font-size: 14px;
-  border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 8px;
 
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+    background-color: white;
+    color: #6D28D9;
+    border: 2px solid #6D28D9;
+    cursor: pointer;
 }
 
 .btn:hover {
-  background: #f3f4f6;
+    background: #f3f4f6;
 }
